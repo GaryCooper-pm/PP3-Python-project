@@ -13,7 +13,7 @@ For my third project I decided to create a ***choose your own adventure*** style
 
 ## Acknowledgements
 
-* Community over on Stack Overflow for code to create the 'typewriter effect for the player welcome text.
+* Community over on Stack Overflow for code inspiration to create the 'typewriter effect for the player welcome text.
 ```
 from time import sleep
 import sys
@@ -25,6 +25,7 @@ for line in lines:
         sleep(0.2)
     print('')
 ```
+* pypi.org for the Colorama module
 
 ---
 
