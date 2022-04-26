@@ -1,8 +1,32 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![pixelmixel logo](docs/images/pixelmixel.png "Pixel Mixel Logo")
 
-Welcome USER_NAME,
+Welcome to my third Code Institute diploma project.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+# Introduction and Overview
+For my third project I decided to create a ***choose your own adventure*** style text game.
+
+### **Live Project can be viewed:**  [HERE](https://garycooper-pm.github.io/PP3-Python-project/)
+
+### **The repository can be found here:**  [HERE](https://github.com/GaryCooper-pm/PP3-Python-project)
+
+---
+
+## Acknowledgements
+
+* Community over on Stack Overflow for code to create the 'typewriter effect for the player welcome text.
+```
+from time import sleep
+import sys
+
+for line in lines:
+    for c in line:
+        print(c, end='')
+        sys.stdout.flush()
+        sleep(0.2)
+    print('')
+```
+
+---
 
 ## Reminders
 
