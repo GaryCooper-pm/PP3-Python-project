@@ -29,3 +29,7 @@ time.sleep(1)
 name = input(Back.MAGENTA + "Please type your name: \n" + Back.RESET).upper()
 time.sleep(1.5)
 
+# Welcome player to the adventure
+print(Fore.GREEN + "Welcome" + Fore.RESET, name, Fore.GREEN + "!")
+time.sleep(1.5)
+print("Your adventure is about to begin!\n\n" + Fore.RESET)
