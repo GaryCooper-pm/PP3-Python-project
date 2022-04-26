@@ -24,3 +24,8 @@ for line in intro:
         sleep(0.125)
     print(Fore.GREEN + '' + Fore.RESET)
 time.sleep(1)
+
+# Request Player to enter a name
+name = input(Back.MAGENTA + "Please type your name: \n" + Back.RESET).upper()
+time.sleep(1.5)
+
