@@ -8,7 +8,7 @@ from colorama import init, Fore, Back
 init()
 
 
-delay = 1
+delay = 1.0
 
 
 def win():
@@ -48,10 +48,22 @@ def open_fields():
 
 def wooden_bridge():
     location_builder(
-        [True, True],
-        "at a wooden bridge that crosses over a fast flowing river.",
-        True,
-        ["win", "kill"],
+        [False],
+        "at a wooden bridge that crosses over a fast flowing river."
+        " You cross the bridge and are faced by a shear rock face."
+        " You notice a small cave entrance to the West.",
+        False,
+        ["cave"],
+    )
+
+
+def cave():
+    location_builder(
+        [False],
+        "in a damp dark cave."
+        " Suddenly a huge grizzly bear appears and attacks you!",
+        False,
+        ["kill"]
     )
 
 
