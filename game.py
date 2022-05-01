@@ -11,14 +11,13 @@ init()
 
 COLORS = {
     "yellow": "\u001b[33;1m",
-    "red": "\u001b[31m",
     "blue": "\u001b[34;1m",
     "magenta": "\u001b[35m",
     "white": "\u001b[37m",
 }
 
 
-def color_text(text):
+def colorText(text):
     """Defines changing the text color"""
     for color in COLORS:
         text = text.replace("[[" + color + "]]", COLORS[color])
@@ -28,17 +27,14 @@ def color_text(text):
 # Printing out the ASCII file
 f = open("virtual_house.txt", "r")
 ascii = "".join(f.readlines())
-print(color_text(ascii))
+print(colorText(ascii))
 time.sleep(3.0)
 os.system('clear')
 
 
 def win():
     """Defines the winning message of the game"""
-    f = open("safe_room.txt", "r")
-    ascii = "".join(f.readlines())
-    print(color_text(ascii))
-    time.sleep(3.0)
+    time.sleep(1.0)
     print(
         Fore.GREEN
         + "Congratulations, "
@@ -50,26 +46,22 @@ def win():
 
 def kill():
     """Defines the losing message of the game"""
-    time.sleep(1.5)
-    os.system('clear')
-    f = open("game_over.txt", "r")
-    ascii = "".join(f.readlines())
-    print(color_text(ascii))
-    print()
+    time.sleep(1.0)
     print(
         Fore.RED
         + "Unfortunately "
         + name
         + " you chose the wrong door!"
-        + Fore.RESET
     )
+    time.sleep(1.0)
+    print("GAME OVER!" + Fore.RESET)
 
 
 def bathroom():
     """Defines the bathroom"""
     f = open("bathroom.txt", "r")
     ascii = "".join(f.readlines())
-    print(color_text(ascii))
+    print(colorText(ascii))
     time.sleep(3.0)
     room_builder([True, False], "the bathroom", True, ["win", "kill"])
 
@@ -78,7 +70,7 @@ def nook():
     """Defines the nook"""
     f = open("nook.txt", "r")
     ascii = "".join(f.readlines())
-    print(color_text(ascii))
+    print(colorText(ascii))
     time.sleep(3.0)
     room_builder([False, True], "the nook", True, ["kill", "win"])
 
@@ -87,7 +79,7 @@ def dining_room():
     """Defines the dining_room"""
     f = open("dining_room.txt", "r")
     ascii = "".join(f.readlines())
-    print(color_text(ascii))
+    print(colorText(ascii))
     time.sleep(3.0)
     room_builder([False, True], "the dining room", True, ["kill", "win"])
 
@@ -96,7 +88,7 @@ def kitchen():
     """Defines the kitchen"""
     f = open("kitchen.txt", "r")
     ascii = "".join(f.readlines())
-    print(color_text(ascii))
+    print(colorText(ascii))
     time.sleep(3.0)
     room_builder([False, True], "the kitchen", False, ["kill", "dining_room"])
 
@@ -105,17 +97,13 @@ def bedroom():
     """Defines the bedroom"""
     f = open("bedroom.txt", "r")
     ascii = "".join(f.readlines())
-    print(color_text(ascii))
+    print(colorText(ascii))
     time.sleep(3.0)
     room_builder([True, False], "the bedroom", False, ["bathroom", "kill"])
 
 
 def office():
     """Defines the office"""
-    f = open("office.txt", "r")
-    ascii = "".join(f.readlines())
-    print(color_text(ascii))
-    time.sleep(3.0)
     room_builder([False, True], "the office", False, ["kill", "nook"])
 
 
@@ -202,8 +190,8 @@ def room_builder(room_list, room_name, is_end_room, next_rooms):
         if command in choices:
             if room_list[choices.index(command)]:
                 if is_end_room:
-                    time.sleep(3.0)
-                    os.system('clear')
+                    time.sleep(1.0)
+                    print("Congratulations, you have chosen wisely!")
                     win()
                     break
                 else:

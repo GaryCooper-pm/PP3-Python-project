@@ -65,23 +65,34 @@ def kill_hills():
     print("GAME OVER!")
 
 
+def wooded_hills():
+    location_builder(
+        [True],  # is this a kill location
+        "among some wooded hills.\n"
+        "As you continue your journey you come upon\n"
+        "a log cabin with a sign on the door\n"
+        "welcoming you in.\n\n"
+        "As you enter the door shuts behind you\n"
+        "and a voice echos...",
+        True,  # is this the last location
+        ["win"],
+    )
+
+
 def ancient_wood():
     location_builder(
-        [True, True],
-        "in some ancient woods",
-        True,
-        ["win", "kill"]
+        [True, True], "in some ancient woods", True, ["win", "kill"]
     )
 
 
 def open_fields():
     location_builder(
-        [True, False],
-        "in open fields filled with bright yellow flowers."
-        " The cobbled road splits,"
-        " hills to the North and an ancient wood to the West",
-        True,
-        ["ancient_wood", "kill_hills"],
+        [True, True],
+        "in open fields filled with bright yellow flowers.\n"
+        "The cobbled road splits, wooded hills to the North\n"
+        "and an ancient wood to the West",
+        False,
+        ["ancient_wood", "wooded_hills"],
     )
 
 
@@ -102,7 +113,7 @@ def cave():
         "in a damp dark cave."
         " Suddenly a huge grizzly bear appears and attacks you!",
         False,
-        ["kill"]
+        ["kill"],
     )
 
 
@@ -193,7 +204,9 @@ def location_builder(
                 break
         else:
             time.sleep(delay)
-            print(f"Sorry, you must enter a valid ({direction_message}")
+            print(
+                f"Sorry, you must enter a valid response ({direction_message}"
+            )
 
 
 location_builder(

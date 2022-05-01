@@ -29,7 +29,18 @@ for line in lines:
 
 * Code formatting courtesy of [Black](https://pypi.org/project/black/)
 
- [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) 
+ [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+ * ANSI escape codes for coloring the ASCII art courtest of [HAOYI'S PROMGRAMMING BLOG](https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html#background-colors)
+```
+COLORS = {
+    "yellow": "\u001b[33;1m",
+    "blue": "\u001b[34;1m",
+    "magenta": "\u001b[35m",
+    "white": "\u001b[37m",
+}
+```
+ * Text to ASCII Art converter courtesy of [PATORJK.COM](https://patorjk.com/software/taag/#p=display&f=Roman&t=Sample%20Text)
 
 ---
 

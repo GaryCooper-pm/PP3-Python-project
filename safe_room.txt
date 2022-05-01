@@ -1,0 +1,9 @@
+[[blue]]
+ .oooooo..o            .o88o.                ooooooooo.                                         
+d8P'    `Y8            888 `"                `888   `Y88.                                       
+Y88bo.       .oooo.   o888oo   .ooooo.        888   .d88'  .ooooo.   .ooooo.  ooo. .oo.  .oo.   
+ `"Y8888o.  `P  )88b   888    d88' `88b       888ooo88P'  d88' `88b d88' `88b `888P"Y88bP"Y88b  
+     `"Y88b  .oP"888   888    888ooo888       888`88b.    888   888 888   888  888   888   888  
+oo     .d8P d8(  888   888    888    .o       888  `88b.  888   888 888   888  888   888   888  
+8""88888P'  `Y888""8o o888o   `Y8bod8P'      o888o  o888o `Y8bod8P' `Y8bod8P' o888o o888o o888o 
+[[white]]
