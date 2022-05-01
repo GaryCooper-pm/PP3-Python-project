@@ -29,31 +29,70 @@ def kill():
     print("GAME OVER!")
 
 
+def kill_cave():
+    time.sleep(delay)
+    print(
+        "As you enter the cave you hear a blood"
+        " curdleing growl!\n"
+        "You turn to run away but come face to face"
+        " with a huge grizzly bear!\n"
+        "Unfortunately "
+        + Fore.GREEN
+        + name
+        + Fore.RESET
+        + " you chose the wrong path!\n\n"
+        "The grizzly bear mauls you to death!\n\n"
+    )
+    time.sleep(delay)
+    print("GAME OVER!")
+
+
+def kill_hills():
+    time.sleep(delay)
+    print(
+        "As you travel North to the hills"
+        " you are attacked by a pack of hungry wolves!\n"
+        "You turn to run away but stumble on some rocks"
+        " and the wolves pounce on you!\n"
+        "Unfortunately "
+        + Fore.GREEN
+        + name
+        + Fore.RESET
+        + " you chose the wrong path!\n\n"
+        "The hungry wolves devour you!\n\n"
+    )
+    time.sleep(delay)
+    print("GAME OVER!")
+
+
 def ancient_wood():
     location_builder(
-        [True, True], "in some ancient woods", True, ["win", "kill"]
+        [True, True],
+        "in some ancient woods",
+        True,
+        ["win", "kill"]
     )
 
 
 def open_fields():
     location_builder(
-        [True, True],
+        [True, False],
         "in open fields filled with bright yellow flowers."
         " The cobbled road splits,"
         " hills to the North and an ancient wood to the West",
-        False,
-        ["win", "kill"],
+        True,
+        ["ancient_wood", "kill_hills"],
     )
 
 
 def wooden_bridge():
     location_builder(
-        [False],
-        "at a wooden bridge that crosses over a fast flowing river."
-        " You cross the bridge and are faced by a shear rock face."
-        " You notice a small cave entrance to the West.",
+        [True],
+        "at a wooden bridge that crosses over a fast flowing river.\n"
+        "You cross the bridge and are faced by a shear rock face.\n"
+        "You notice a small cave entrance to the West.",
         False,
-        ["cave"],
+        ["kill_cave"],
     )
 
 
