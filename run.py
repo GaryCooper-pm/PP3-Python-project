@@ -41,9 +41,9 @@ def win():
     time.sleep(3.0)
     print(
         Fore.GREEN
-        + "Congratulations, "
+        + "Congratulations "
         + name
-        + " you managed to reach the safe room and",
+        + " you managed to reach the safe room and\n",
         "survive the Virtual House!" + Fore.RESET
         )
 
