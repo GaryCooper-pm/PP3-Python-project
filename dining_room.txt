@@ -1,11 +1,18 @@
 [[yellow]]
-oooooooooo.    o8o               o8o                              ooooooooo.                                         
-`888'   `Y8b   `"'               `"'                              `888   `Y88.                                       
- 888      888 oooo  ooo. .oo.   oooo  ooo. .oo.    .oooooooo       888   .d88'  .ooooo.   .ooooo.  ooo. .oo.  .oo.   
- 888      888 `888  `888P"Y88b  `888  `888P"Y88b  888' `88b        888ooo88P'  d88' `88b d88' `88b `888P"Y88bP"Y88b  
- 888      888  888   888   888   888   888   888  888   888        888`88b.    888   888 888   888  888   888   888  
- 888     d88'  888   888   888   888   888   888  `88bod8P'        888  `88b.  888   888 888   888  888   888   888  
-o888bood8P'   o888o o888o o888o o888o o888o o888o `8oooooo.       o888o  o888o `Y8bod8P' `Y8bod8P' o888o o888o o888o 
-                                                  d"     YD                                                          
-                                                  "Y88888P'                                                          
+ooooo.    o8             o8                         
+`88'`Yb   `"             `"                         
+ 88   88 ooo  ooo. .o.  ooo  oo. .o.    .ooooo 
+ 88   88 `88  `88P"Y8b  `88  `88P"Y8b  88'`8b  
+ 88   88  88   88   88   88   88   88  88  88  
+ 88  d8'  88   88   88   88   88   88  `8bdP'  
+o88bdP'  o88o o88o o88o o88o o88o o88o `8ooo.  
+                                       d"  YD  
+                                       "Y88P'  
+oooooo.                                                   
+`88 `Y88.                                                 
+ 88 .d88'  .oo.   .oo.  oo. .o.  .o.             
+ 88o88P'  d8'`8b d8'`8b `88P"Y8bP"Y8b            
+ 88` 8b.  88  88 88  88  88   88   88            
+ 88  `8b. 88  88 88  88  88   88   88            
+o88o  o88o`YbdP' `YbdP' o88o o88o o88o           
 [[white]]

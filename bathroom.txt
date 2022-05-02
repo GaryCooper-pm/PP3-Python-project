@@ -1,9 +1,9 @@
 [[yellow]]
-oooooooooo.                .   oooo                                                       
-`888'   `Y8b             .o8   `888                                                       
- 888     888  .oooo.   .o888oo  888 .oo.   oooo d8b  .ooooo.   .ooooo.  ooo. .oo.  .oo.   
- 888oooo888' `P  )88b    888    888P"Y88b  `888""8P d88' `88b d88' `88b `888P"Y88bP"Y88b  
- 888    `88b  .oP"888    888    888   888   888     888   888 888   888  888   888   888  
- 888    .88P d8(  888    888 .  888   888   888     888   888 888   888  888   888   888  
-o888bood8P'  `Y888""8o   "888" o888o o888o d888b    `Y8bod8P' `Y8bod8P' o888o o888o o888o 
+oooooo.             .   ooo                                                       
+`88'`Y8b          .o8   `88                                                       
+ 88  888  .ooo.  .o8oo   88 .oo.  ooo d8b  .ooo.   .ooo.   oo. .o.  .o.   
+ 88o888' `P  )8b   88    88P"Y8b  `88""8P d8' `8b d8' `8b `88P"Y8bP"Y8b  
+ 88 `88b  .oP"88   88    88   88   88     88   88 88   88  88   88   88  
+ 88 .88P d8(  88   88 .  88   88   88     88   88 88   88  88   88   88  
+o88b8P'  `Y888"8o  "88" o88o o88o d88b    `YbodP' `YbodP' o88o o88o o88o
 [[white]]
