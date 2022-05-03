@@ -193,6 +193,7 @@ def room_builder(room_list, room_name, is_end_room, next_rooms):
         else:
             door_message += f"door {count + 1}): "
     # Add the door message onto the back of the input message
+    # and checks for valid user input
     input_message += door_message
     time.sleep(1.0)
 
