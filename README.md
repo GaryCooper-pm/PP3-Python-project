@@ -87,9 +87,18 @@ My initial idea for this project was to create a simple choose your own adventur
     * The terminal window displays the required input,
         this is in the form of the choice of doors to enter.  Outcome: `Fulfilled.`
 
+* `As a user, I want to easily understand if I have won or lost the game`:
+    * The terminal window displays the appropriate message,
+        this is in the form of a messge saying you proceed to the next room,
+        or the appropriate end screen.  Outcome: `Fulfilled.`
+
 
 ## Validation
+### PEP8 Online Validation
 
+Python code was passed through the [PEP8 online](http://pep8online.com/) code checker.
+
+![pep8 check](docs/images/pep8_check.png)
 
 
 ## Manual Testing
