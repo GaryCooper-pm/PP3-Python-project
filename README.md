@@ -40,7 +40,7 @@ My initial idea for this project was to create a simple choose your own adventur
     - [User story testing](#user-story-testing)
     - [Validation](#validation)
     - [Manual testing](#manual-testing)
-    - [Unsolved bugs and errors](#unsolved-bugs-and-errors)
+    - [Unsolved bugs and errors](#unsolved-bugs-and-problems)
 - [TECHNOLOGIES](#technologies)
     - [Development](#development)
     - [Languages used](#languages-used)
@@ -164,7 +164,7 @@ Python code was passed through the [PEP8 online](http://pep8online.com/) code ch
     - time was imported to provide the ability to add delays to the game using the ```sleep()``` function.
 
 * Sys
-    - sys was imported for the exit and restart function of the game.
+    - sys was imported for the exit of the game.
 
 * Colorama
     - colorama was installed to enable to change the terminal text color.
