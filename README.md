@@ -40,7 +40,7 @@ My initial idea for this project was to create a simple choose your own adventur
     - [User story testing](#user-story-testing)
     - [Validation](#validation)
     - [Manual testing](#manual-testing)
-    - [Unsolved bugs and errors](#unsolved-bugs-and-problems)
+    - [Unsolved bugs and problems](#unsolved-bugs-and-problems)
 - [TECHNOLOGIES](#technologies)
     - [Development](#development)
     - [Languages used](#languages-used)
