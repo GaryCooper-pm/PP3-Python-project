@@ -137,7 +137,9 @@ Python code was passed through the [PEP8 online](http://pep8online.com/) code ch
 
 ## Unsolved bugs and problems
 
+* I currently have 40 problems with my code as detailed in the screenshot below.
 
+![code problems](docs/images/problems.png)
 
 
 ---
