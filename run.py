@@ -48,23 +48,6 @@ def win():
         )
 
 
-def kill():
-    """Defines the losing message of the game"""
-    time.sleep(1.5)
-    os.system('clear')
-    file = open("game_over.txt", "r")
-    ascii = "".join(file.readlines())
-    print(color_text(ascii))
-    print()
-    print(
-        Fore.RED
-        + "Unfortunately "
-        + name
-        + " you chose the wrong door!"
-        + Fore.RESET
-    )
-
-
 def bathroom():
     """Defines the bathroom"""
     file = open("bathroom.txt", "r")
@@ -119,45 +102,50 @@ def office():
     room_builder([False, True], "the office", False, ["kill", "nook"])
 
 
-# Prints a little house
-print("       `'::::. ")
-time.sleep(1.0)
-print("         _____A_ ")
-time.sleep(1.0)
-print("        /       /\ ")
-time.sleep(1.0)
-print("     __/___/\__/  \___")
-time.sleep(1.0)
-print("---/___|'  '' '| /___/\----")
-time.sleep(1.0)
-print("   |' '|'' ||''| |' '|| ")
-time.sleep(1.0)
-print(Back.GREEN + "   `' '`'' ))''`'`''''`  \n" + Back.RESET)
-time.sleep(2.0)
+def build_house():
+    """Builds a little house from characters"""
+    # Prints a little house
+    print("       `'::::. ")
+    time.sleep(1.0)
+    print("         _____A_ ")
+    time.sleep(1.0)
+    print("        /       /\ ")
+    time.sleep(1.0)
+    print("     __/___/\__/  \___")
+    time.sleep(1.0)
+    print("---/___|'  '' '| /___/\----")
+    time.sleep(1.0)
+    print("   |' '|'' ||''| |' '|| ")
+    time.sleep(1.0)
+    print(Back.GREEN + "   `' '`'' ))''`'`''''`  \n" + Back.RESET)
+    time.sleep(2.0)
 
 
-# Request Player to enter a name
-name = input(Back.MAGENTA + "Please type your name: \n" + Back.RESET).upper()
-time.sleep(2.0)
-
-# Welcome player to the adventure
-print()
-print(Fore.GREEN + "Welcome" + Fore.RESET, name, Fore.GREEN + "!")
-time.sleep(1.0)
-print("Your adventure is about to begin!\n" + Fore.RESET)
-time.sleep(2.0)
-os.system('clear')
+def enter_username(name):
+    """Requests player to enter a name"""
+    # Request Player to enter a name
+    name = input(Back.MAGENTA + "Please type your name: \n" + Back.RESET).upper()
+    time.sleep(2.0)
 
 
-# Adventure introduction
-intro = [
-    "You have woken up in a strange virtual house.\n"
-    "Your challenge is to make it to the safe room.\n",
-]
+def welcome():
+    """Welcomes the player to the adventure"""
+    # Welcome player to the adventure
+    print()
+    print(Fore.GREEN + "Welcome" + Fore.RESET, name, Fore.GREEN + "!")
+    time.sleep(1.0)
+    print("Your adventure is about to begin!\n" + Fore.RESET)
+    time.sleep(2.0)
+    os.system('clear')
 
 
-def typewriter_text(self):
+def typewriter_text():
     """Types text out like a typewriter"""
+    # Adventure introduction
+    intro = [
+        "You have woken up in a strange virtual house.\n"
+        "Your challenge is to make it to the safe room.\n",
+    ]
     for line in intro:
         for character in line:
             print(character, end="")
@@ -167,7 +155,24 @@ def typewriter_text(self):
     time.sleep(1.0)
 
 
-typewriter_text(intro)
+typewriter_text()
+
+
+def kill():
+    """Defines the losing message of the game"""
+    time.sleep(1.5)
+    os.system('clear')
+    file = open("game_over.txt", "r")
+    ascii = "".join(file.readlines())
+    print(color_text(ascii))
+    print()
+    print(
+        Fore.RED
+        + "Unfortunately "
+        + name
+        + " you chose the wrong door!"
+        + Fore.RESET
+    )
 
 
 # ([list of doors(T/F)], The Room Name, last room (T,F), [list of next room])
@@ -232,3 +237,19 @@ room_builder(
     False,
     ["kitchen", "bedroom", "office"],
 )
+
+
+def main():
+    print(build_house)
+    enter_username(name)
+    # print(welcome)
+    typewriter_text()
+    room_builder(
+    [True, True, True],
+    "the entrance hall",
+    False,
+    ["kitchen", "bedroom", "office"],
+)
+
+
+main()
