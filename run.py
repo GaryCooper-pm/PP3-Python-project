@@ -242,7 +242,7 @@ room_builder(
 def main():
     print(build_house)
     enter_username(name)
-    # print(welcome)
+    print(welcome)
     typewriter_text()
     room_builder(
     [True, True, True],
