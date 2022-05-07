@@ -4,6 +4,8 @@ import os
 import time
 from time import sleep
 import sys
+from sys import exit
+import colorama
 from colorama import init, Fore, Back
 
 init()
@@ -46,6 +48,15 @@ def win():
         + " you managed to reach the safe room and\n",
         "survive the Virtual House!" + Fore.RESET
         )
+    time.sleep(2.0)
+    retry = input(Fore.GREEN + "Would you like to try again (Yes or No)?\n" + Style.RESET)
+    if retry.lower() == 'yes':
+        main()
+    elif retry.lower() == 'no':
+        exit()
+    else:
+        error()
+        win()
 
 
 def bathroom():
@@ -173,6 +184,15 @@ def kill():
         + " you chose the wrong door!"
         + Fore.RESET
     )
+    time.sleep(2.0)
+    retry = input(Fore.RED + "Would you like to try again (Yes or No)?\n" + Style.RESET)
+    if retry.lower() == 'yes':
+        main()
+    elif retry.lower() == 'no':
+        exit()
+    else:
+        error()
+        kill()
 
 
 # ([list of doors(T/F)], The Room Name, last room (T,F), [list of next room])
@@ -239,17 +259,39 @@ room_builder(
 )
 
 
+# Error function, returns when wrong input is chosen
+def error():
+    print(f"Sorry, you must enter a valid response (Yes or No)?\n")
+
+
 def main():
-    print(build_house)
-    enter_username(name)
-    print(welcome)
-    typewriter_text()
-    room_builder(
-    [True, True, True],
-    "the entrance hall",
-    False,
-    ["kitchen", "bedroom", "office"],
-)
+    user_choice = input(Fore.GREEN + "Would you like to play the game (Yes or No)?\n" + Style.RESET)
+    if user_choice.lower() == "yes":
+        print(welcome)
+        typewriter_text()
+        room_builder(
+        [True, True, True],
+        "the entrance hall",
+        False,
+        ["kitchen", "bedroom", "office"],)
+    elif user_choice.lower() == "no":
+        exit()
+    else:
+        error()
+        main()
+
+
+# def main():
+#     print(build_house)
+#     enter_username(name)
+#     print(welcome)
+#     typewriter_text()
+#     room_builder(
+#     [True, True, True],
+#     "the entrance hall",
+#     False,
+#     ["kitchen", "bedroom", "office"],
+# )
 
 
 main()
