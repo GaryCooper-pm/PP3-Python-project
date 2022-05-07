@@ -35,6 +35,30 @@ time.sleep(3.0)
 os.system('clear')
 
 
+def enter_username():
+    """Requests player to enter a name"""
+    # Request Player to enter a name
+    name = input(Back.MAGENTA + "Please type your name: \n" + Back.RESET).upper()
+    time.sleep(2.0)
+
+
+enter_username()
+
+
+def welcome():
+    """Welcomes the player to the adventure"""
+    # Welcome player to the adventure
+    print()
+    print(Fore.GREEN + "Welcome" + Fore.RESET, name, + Fore.GREEN + "!")
+    time.sleep(1.0)
+    print("Your adventure is about to begin!\n" + Fore.RESET)
+    time.sleep(2.0)
+    os.system('clear')
+
+
+welcome()
+
+
 def win():
     """Defines the winning message of the game"""
     file = open("safe_room.txt", "r")
@@ -132,22 +156,22 @@ def build_house():
     time.sleep(2.0)
 
 
-def enter_username(name):
-    """Requests player to enter a name"""
-    # Request Player to enter a name
-    name = input(Back.MAGENTA + "Please type your name: \n" + Back.RESET).upper()
-    time.sleep(2.0)
+# def enter_username(name):
+#     """Requests player to enter a name"""
+#     # Request Player to enter a name
+#     name = input(Back.MAGENTA + "Please type your name: \n" + Back.RESET).upper()
+#     time.sleep(2.0)
 
 
-def welcome():
-    """Welcomes the player to the adventure"""
-    # Welcome player to the adventure
-    print()
-    print(Fore.GREEN + "Welcome" + Fore.RESET, name, Fore.GREEN + "!")
-    time.sleep(1.0)
-    print("Your adventure is about to begin!\n" + Fore.RESET)
-    time.sleep(2.0)
-    os.system('clear')
+# def welcome():
+#     """Welcomes the player to the adventure"""
+#     # Welcome player to the adventure
+#     print()
+#     print(Fore.GREEN + "Welcome" + Fore.RESET, name, Fore.GREEN + "!")
+#     time.sleep(1.0)
+#     print("Your adventure is about to begin!\n" + Fore.RESET)
+#     time.sleep(2.0)
+#     os.system('clear')
 
 
 def typewriter_text():
@@ -267,7 +291,8 @@ def error():
 def main():
     user_choice = input(Fore.GREEN + "Would you like to play the game (Yes or No)?\n" + Style.RESET)
     if user_choice.lower() == "yes":
-        print(welcome)
+        enter_username()
+        welcome()
         typewriter_text()
         room_builder(
         [True, True, True],
