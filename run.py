@@ -99,6 +99,12 @@ def win():
         time.sleep(1.5)
         main()
     elif retry.lower() == 'no':
+        print()
+        print(
+            Fore.RED
+            + "Thank you for playing Virtual House!"
+            + Fore.RESET
+        )
         exit()
     else:
         error()
@@ -216,6 +222,12 @@ def main():
         False,
         ["kitchen", "bedroom", "office"],)
     elif user_choice.lower() == "no":
+        print()
+        print(
+            Fore.RED
+            + "Thank you for playing Virtual House!"
+            + Fore.RESET
+        )
         exit()
     else:
         error()
@@ -243,6 +255,12 @@ def kill():
         time.sleep(1.5)
         main()
     elif retry.lower() == 'no':
+        print()
+        print(
+            Fore.RED
+            + "Thank you for playing Virtual House!"
+            + Fore.RESET
+        )
         exit()
     else:
         error()
