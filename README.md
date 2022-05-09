@@ -280,6 +280,11 @@ for line in intro:
 ```
 * pypi.org for the Colorama module
 
+* Jason Ault over on YouTube for his explanation and code on how to resolve the issue of calling a function within a function.
+```
+eval(next_rooms[choices.index(command)] + "()")
+```
+
 * Code formatting courtesy of [Black](https://pypi.org/project/black/)
 
  [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
