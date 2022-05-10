@@ -62,6 +62,57 @@ def win():
         + " you managed to reach the safe room and\n",
         "survive the Virtual House!" + Fore.RESET
         )
+    time.sleep(2.0)
+    retry = input(
+        Fore.GREEN + "Would you like to play again (Yes or No)?\n" + Fore.RESET
+        )
+    if retry.lower() == 'yes':
+        os.system('clear')
+        time.sleep(1.5)
+        main()
+    elif retry.lower() == 'no':
+        print()
+        print(
+            Fore.GREEN
+            + "Thank you for playing Virtual House!"
+            + Fore.RESET
+        )
+        exit()
+    else:
+        error()
+        win()
+
+
+# Error function, returns when wrong Yes No inpout is chosen
+def error():
+    """Defines an error message when the user inputs the incorrect response"""
+    print(f"Sorry, you must enter a valid response (Yes or No)?\n")
+
+
+def main():
+    user_choice = input(
+        Fore.GREEN + "Would you like to play the game (Yes or No)?\n"
+        + Fore.RESET)
+    if user_choice.lower() == "yes":
+        os.system('clear')
+        time.sleep(1.5)
+        typewriter_text()
+        room_builder(
+        [True, True, True],
+        "the entrance hall",
+        False,
+        ["kitchen", "bedroom", "office"],)
+    elif user_choice.lower() =="no":
+        print()
+        print(
+            Fore.RED
+            + "Thank you for playing Virtual House!"
+            + Fore.RESET
+        )
+        exit()
+    else:
+        error()
+        main()
 
 
 def kill():
@@ -79,6 +130,24 @@ def kill():
         + " you chose the wrong door!"
         + Fore.RESET
     )
+    time.sleep(2.0)
+    retry = input(Fore.RED + "Would you like to try again (Yes or No)?\n"
+    + Fore.RESET)
+    if retry.lower() == 'yes':
+        os.system('clear')
+        time.sleep(1.5)
+        main()
+    elif retry.lower() == 'no':
+        print()
+        print(
+            Fore.RED
+            + "Thank you for playing Virtual House"
+            + Fore.RESET
+        )
+        exit()
+    else:
+        error()
+        kill()
 
 
 def bathroom():
@@ -233,3 +302,6 @@ room_builder(
     False,
     ["kitchen", "bedroom", "office"],
 )
+
+
+main()
