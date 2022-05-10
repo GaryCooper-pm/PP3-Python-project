@@ -4,6 +4,8 @@ import os
 import time
 from time import sleep
 import sys
+from sys import exit
+import colorama
 from colorama import init, Fore, Back
 
 init()
