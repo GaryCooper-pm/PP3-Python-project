@@ -5,7 +5,6 @@ import time
 from time import sleep
 import sys
 from sys import exit
-import colorama
 from colorama import init, Fore, Back
 
 init()
@@ -80,7 +79,6 @@ def win():
         exit()
     else:
         error()
-        win()
 
 
 # Error function, returns when wrong Yes No inpout is chosen
@@ -98,11 +96,11 @@ def main():
         time.sleep(1.5)
         typewriter_text()
         room_builder(
-        [True, True, True],
-        "the entrance hall",
-        False,
-        ["kitchen", "bedroom", "office"],)
-    elif user_choice.lower() =="no":
+            [True, True, True],
+            "the entrance hall",
+            False,
+            ["kitchen", "bedroom", "office"],)
+    elif user_choice.lower() == "no":
         print()
         print(
             Fore.RED
@@ -131,8 +129,8 @@ def kill():
         + Fore.RESET
     )
     time.sleep(2.0)
-    retry = input(Fore.RED + "Would you like to try again (Yes or No)?\n"
-    + Fore.RESET)
+    retry = input(
+        Fore.RED + "Would you like to try again (Yes or No)?\n" + Fore.RESET)
     if retry.lower() == 'yes':
         os.system('clear')
         time.sleep(1.5)
@@ -147,7 +145,6 @@ def kill():
         exit()
     else:
         error()
-        kill()
 
 
 def bathroom():
