@@ -35,6 +35,20 @@ time.sleep(3.0)
 os.system('clear')
 
 
+# Request Player to enter a name
+name = input(Back.MAGENTA + "Please type your name: \n" + Back.RESET).upper()
+time.sleep(2.0)
+
+
+# Welcome player to the adventure
+print()
+print(Fore.GREEN + "Welcome" + Fore.RESET, name, Fore.GREEN + "!")
+time.sleep(1.0)
+print("Your adventure is about to begin!\n" + Fore.RESET)
+time.sleep(2.0)
+os.system('clear')
+
+
 def win():
     """Defines the winning message of the game"""
     file = open("safe_room.txt", "r")
@@ -138,28 +152,13 @@ print(Back.GREEN + "   `' '`'' ))''`'`''''`  \n" + Back.RESET)
 time.sleep(2.0)
 
 
-# Request Player to enter a name
-name = input(Back.MAGENTA + "Please type your name: \n" + Back.RESET).upper()
-time.sleep(2.0)
-
-# Welcome player to the adventure
-print()
-print(Fore.GREEN + "Welcome" + Fore.RESET, name, Fore.GREEN + "!")
-time.sleep(1.0)
-print("Your adventure is about to begin!\n" + Fore.RESET)
-time.sleep(2.0)
-os.system('clear')
-
-
-# Adventure introduction
-intro = [
-    "You have woken up in a strange virtual house.\n"
-    "Your challenge is to make it to the safe room.\n",
-]
-
-
-def typewriter_text(self):
+def typewriter_text():
     """Types text out like a typewriter"""
+    # Adventure introduction
+    intro = [
+        "You have woken up in a strange virtual house.\n"
+        "Your challenge is to make it to the safe room.\n",
+    ]
     for line in intro:
         for character in line:
             print(character, end="")
@@ -169,7 +168,7 @@ def typewriter_text(self):
     time.sleep(1.0)
 
 
-typewriter_text(intro)
+typewriter_text()
 
 
 # ([list of doors(T/F)], The Room Name, last room (T,F), [list of next room])
