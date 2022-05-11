@@ -9,6 +9,7 @@ from colorama import init, Fore, Back
 
 init()
 
+name = ''
 
 COLORS = {
     "yellow": "\u001b[33;1m",
@@ -26,26 +27,53 @@ def color_text(text):
     return text
 
 
-# Printing out the ASCII file
-file = open("virtual_house.txt", "r")
-ascii = "".join(file.readlines())
-print(color_text(ascii))
-time.sleep(3.0)
-os.system('clear')
+def welcome():
+    global name
+    # Printing out the ASCII file
+    file = open("virtual_house.txt", "r")
+    ascii = "".join(file.readlines())
+    print(color_text(ascii))
+    time.sleep(3.0)
+    os.system('clear')
+
+    # Request Player to enter a name
+    while True:
+        try:
+            name = input(Back.MAGENTA + "Please type your name: \n" + Back.RESET
+            ).upper()
+        except ValueError:
+            print(Fore.RED + "Error reading username." + Fore.RESET)
+            continue
+        if name == '':
+            print(Fore.RED + "Please enter a username." + Fore.RESET)
+            continue
+        else:
+            break
+        time.sleep(2.0)
 
 
-# Request Player to enter a name
-name = input(Back.MAGENTA + "Please type your name: \n" + Back.RESET).upper()
-time.sleep(2.0)
-
-
-# Welcome player to the adventure
-print()
-print(Fore.GREEN + "Welcome" + Fore.RESET, name, Fore.GREEN + "!")
-time.sleep(1.0)
-print("Your adventure is about to begin!\n" + Fore.RESET)
-time.sleep(2.0)
-os.system('clear')
+    # Welcome player to the adventure
+    print()
+    print(Fore.GREEN + "Welcome" + Fore.RESET, name, Fore.GREEN + "!")
+    time.sleep(1.0)
+    print("Your adventure is about to begin!\n" + Fore.RESET)
+    time.sleep(2.0)
+    os.system('clear')
+    # Prints a little house
+    print("       `'::::. ")
+    time.sleep(1.0)
+    print("         _____A_ ")
+    time.sleep(1.0)
+    print("        /       /\ ")
+    time.sleep(1.0)
+    print("     __/___/\__/  \___")
+    time.sleep(1.0)
+    print("---/___|'  '' '| /___/\----")
+    time.sleep(1.0)
+    print("   |' '|'' ||''| |' '|| ")
+    time.sleep(1.0)
+    print(Back.GREEN + "   `' '`'' ))''`'`''''`  \n" + Back.RESET)
+    time.sleep(2.0)
 
 
 def win():
@@ -81,13 +109,14 @@ def win():
         error()
 
 
-# Error function, returns when wrong Yes No inpout is chosen
+# Error function, returns when wrong Yes No input is chosen
 def error():
     """Defines an error message when the user inputs the incorrect response"""
-    print(f"Sorry, you must enter a valid response (Yes or No)?\n")
+    print("Sorry, you must enter a valid response (Yes or No)?\n")
 
 
 def main():
+    welcome()
     user_choice = input(
         Fore.GREEN + "Would you like to play the game (Yes or No)?\n"
         + Fore.RESET)
@@ -201,23 +230,6 @@ def office():
     room_builder([False, True], "the office", False, ["kill", "nook"])
 
 
-# Prints a little house
-print("       `'::::. ")
-time.sleep(1.0)
-print("         _____A_ ")
-time.sleep(1.0)
-print("        /       /\ ")
-time.sleep(1.0)
-print("     __/___/\__/  \___")
-time.sleep(1.0)
-print("---/___|'  '' '| /___/\----")
-time.sleep(1.0)
-print("   |' '|'' ||''| |' '|| ")
-time.sleep(1.0)
-print(Back.GREEN + "   `' '`'' ))''`'`''''`  \n" + Back.RESET)
-time.sleep(2.0)
-
-
 def typewriter_text():
     """Types text out like a typewriter"""
     # Adventure introduction
@@ -234,12 +246,7 @@ def typewriter_text():
     time.sleep(1.0)
 
 
-typewriter_text()
-
-
 # ([list of doors(T/F)], The Room Name, last room (T,F), [list of next room])
-
-
 def room_builder(room_list, room_name, is_end_room, next_rooms):
     """Defines the room builder"""
     print(f"You find yourself in {room_name}.")
@@ -250,7 +257,7 @@ def room_builder(room_list, room_name, is_end_room, next_rooms):
     # Dynamically build an input message based on my number of doors
     input_message = "Please choose a door to enter: ("
 
-    # Add each ddoor name to the list and to a message |
+    # Add each door name to the list and to a message |
     # exp (door 1, door 2, door 3)
     door_message = ""
     for count in range(room_count):
@@ -290,15 +297,7 @@ def room_builder(room_list, room_name, is_end_room, next_rooms):
                 break
         else:
             time.sleep(1.0)
-            print(f"Sorry, you must enter a valid response ({door_message}")
-
-
-room_builder(
-    [True, True, True],
-    "the entrance hall",
-    False,
-    ["kitchen", "bedroom", "office"],
-)
+            print("Sorry, you must enter a valid response ({door_message}")
 
 
 main()
