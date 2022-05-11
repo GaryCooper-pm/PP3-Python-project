@@ -39,8 +39,8 @@ def welcome():
     # Request Player to enter a name
     while True:
         try:
-            name = input(Back.MAGENTA + "Please type your name: \n" + Back.RESET
-            ).upper()
+            name = input(Back.MAGENTA + "Please type your name: \n"
+                         + Back.RESET).upper()
         except ValueError:
             print(Fore.RED + "Error reading username." + Fore.RESET)
             continue
@@ -50,7 +50,6 @@ def welcome():
         else:
             break
         time.sleep(2.0)
-
 
     # Welcome player to the adventure
     print()

@@ -65,7 +65,6 @@ My initial idea for this project was to create a simple choose your own adventur
 * Add more descriptive detail to the rooms
 * Add more rooms to the game to prolong gameplay
 * Add ability to collect and use items along the way
-* Add the option to play again
 
 
 ### Typography:
@@ -92,6 +91,10 @@ My initial idea for this project was to create a simple choose your own adventur
         this is in the form of a messge saying you proceed to the next room,
         or the appropriate end screen.  Outcome: `Fulfilled.`
 
+* `As a user, I want to have the option to play the game again`:
+    * Once the user completes the game, the terminal window displays a message,
+        this is in the form of a messge asking if the user wants to play again.  Outcome: `Fulfilled.`
+
 
 ## Validation
 ### PEP8 Online Validation
@@ -107,11 +110,23 @@ Python code was passed through the [PEP8 online](http://pep8online.com/) code ch
 
 ![user name input](docs/images/username_request.png)
 
+* If the user does not enter their name and simply presses the **ENTER** key they recieve an error message and must type something to continue.
+
+![user name input](docs/images/username_request_error.png)
+
 * Once they have typed their name the program converts the user input to UPPERCASE text and welcomes them to the game.
 
 ![user welcome](docs/images/user_welcome.png)
 
-* After a short pause the terminal window clears and the introduction begins to type out and the adventure begins.
+* After a short pause the terminal window clears and a small house begins to appear on the screen followed by a request asking if the user would like to play the game?
+
+![play game](docs/images/play_game.png)
+
+* If the user types **no** a message appears and exits the game.
+
+![play game no](docs/images/play_game_no.png)
+
+* If the user types **yes** after a short pause the terminal window clears and the introduction begins to type out and the adventure begins.
 
 ![adventure starts](docs/images/adventure_start.png)
 
@@ -137,13 +152,15 @@ Python code was passed through the [PEP8 online](http://pep8online.com/) code ch
 
 ## Unsolved bugs and problems
 
-* I currently have 43 problems with my code as detailed in the screenshot below.
+* I currently have 34 problems with my code as detailed in the screenshot below.
 
 ![code problems](docs/images/problems.png)
 
 
-![code problems](docs/images/problems2.png)
+## Resolved bugs and problems
 
+* During the course of writing the code I encountered an issue where I was unable to call the users input
+```name```, I was able to resolve this by decalring name as a global veriable.
 
 ---
 
