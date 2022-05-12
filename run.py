@@ -75,6 +75,15 @@ def welcome():
     time.sleep(2.0)
 
 
+# Error function, returns when wrong Yes No input is chosen
+def error():
+    """Defines an error message when the user inputs the incorrect response"""
+    print("Sorry, you must enter a valid response.  Let us try this again!\n")
+    time.sleep(2.0)
+    os.system('clear')
+    main()
+
+
 def win():
     """Defines the winning message of the game"""
     file = open("safe_room.txt", "r")
@@ -92,26 +101,21 @@ def win():
     retry = input(
         Fore.GREEN + "Would you like to play again (Yes or No)?\n" + Fore.RESET
         )
-    if retry.lower() == 'yes':
-        os.system('clear')
-        time.sleep(1.5)
-        main()
-    elif retry.lower() == 'no':
-        print()
-        print(
-            Fore.GREEN
-            + "Thank you for playing Virtual House!"
-            + Fore.RESET
-        )
-        exit()
-    else:
-        error()
-
-
-# Error function, returns when wrong Yes No input is chosen
-def error():
-    """Defines an error message when the user inputs the incorrect response"""
-    print("Sorry, you must enter a valid response (Yes or No)?\n")
+    while True:
+        if retry.lower() == 'yes':
+            os.system('clear')
+            time.sleep(1.5)
+            main()
+        elif retry.lower() == 'no':
+            print()
+            print(
+                Fore.GREEN
+                + "Thank you for playing Virtual House!"
+                + Fore.RESET
+            )
+            exit()
+        else:
+            error()
 
 
 def main():
@@ -138,7 +142,6 @@ def main():
         exit()
     else:
         error()
-        main()
 
 
 def kill():
@@ -296,7 +299,7 @@ def room_builder(room_list, room_name, is_end_room, next_rooms):
                 break
         else:
             time.sleep(1.0)
-            print("Sorry, you must enter a valid response ({door_message}")
+            print(f"Sorry, you must enter a valid response ({door_message}")
 
 
 main()
