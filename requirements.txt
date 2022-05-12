@@ -1,1 +1,5 @@
-# Your requirements go here
+black @ git+https://github.com/psf/black@fb8dfdeec5fd76cc0c30f881d6fc75851139d80a
+click==8.1.3
+colorama==0.4.4
+pathspec==0.9.0
+playsound==1.3.0
