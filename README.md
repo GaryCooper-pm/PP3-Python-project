@@ -11,7 +11,7 @@ For my third project I decided to create a ***choose your own adventure*** style
 
 ![Loading Image](docs/images/loading_screen.png)
 
-### **Live Project can be viewed:**  [HERE](https://garycooper-pm.github.io/PP3-Python-project/)
+### **Live Project can be viewed:**  [HERE](https://gc-pp3-python-project.herokuapp.com/)
 
 ### **The repository can be found here:**  [HERE](https://github.com/GaryCooper-pm/PP3-Python-project)
 
