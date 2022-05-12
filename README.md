@@ -290,7 +290,17 @@ If you need to make a local clone:
 
 ## ACKNOWLEDGEMENTS
 
-* Community over on Stack Overflow for code inspiration to create the 'typewriter text effect.
+* My mnetor Brian O'Hare for all his support advice and encouragement throughout this project.
+
+* My loving family for putting up with my hours sat at the computer working things out.
+
+* My business partner Damian for his continued support and guidance.
+
+* My good friend Barry for listening to me witter on whilst we are out riding our bikes.
+
+* My fellow students on Slack for their advice when things don't go according to plan.
+
+* The community over on Stack Overflow for code inspiration to create the 'typewriter text effect.
 ```
 for line in intro:
         for character in line:
